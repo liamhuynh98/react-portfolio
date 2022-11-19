@@ -27,119 +27,151 @@ const Particle = (props: Props) => {
             options={{
                 "fullScreen": {
                     "enable": true,
-                    "zIndex": 1
+                    "zIndex": 0
                 },
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#ffffff"
-                    },
-                    "shape": {
-                        "type": "circle"
-                    },
-                    "opacity": {
-                        "value": 1,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 30,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 1,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 2,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
+                "detectRetina": false,
+                "fpsLimit": 120,
                 "interactivity": {
                     "events": {
+                        "onClick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "onDiv": {
+                            "elementId": "repulse-div",
+                            "enable": true,
+                            "mode": "repulse"
+                        },
                         "onHover": {
                             "enable": true,
                             "mode": "bubble",
                             "parallax": {
                                 "enable": false,
-                                "force": 60,
+                                "force": 2,
                                 "smooth": 10
                             }
-                        },
-                        "onClick": {
-                            "enable": true,
-                            "mode": "push"
                         },
                         "resize": true
                     },
                     "modes": {
+                        "bubble": {
+                            "distance": 20,
+                            "duration": 2,
+                            "opacity": 10,
+                            "size": 4,
+                            "speed": 2
+                        },
+                        "connect": {
+                            "distance": 80,
+                            "lineLinked": {
+                                "opacity": 1
+                            },
+                            "radius": 60
+                        },
                         "grab": {
                             "distance": 400,
                             "lineLinked": {
-                                "opacity": 1
+                                "opacity": 10
                             }
                         },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 100,
-                            "duration": 2,
-                            "opacity": 1,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200
-                        },
                         "push": {
-                            "particles_nb": 4
+                            "quantity": 3
                         },
                         "remove": {
-                            "particles_nb": 2
+                            "quantity": 4
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "slow": {
+                            "active": true,
+                            "radius": 0,
+                            "factor": 1
                         }
                     }
                 },
-                "backgroundMask": {
+                "particles": {
+                    "color": {
+                        "value": "#38bdf8"
+                    },
+                    "lineLinked": {
+                        "blink": false,
+                        "color": "#f43f5e",
+                        "consent": false,
+                        "distance": 50,
+                        "enable": true,
+                        "opacity": 4,
+                        "width": 2
+                    },
+                    "move": {
+                        "attract": {
+                            "enable": false,
+                            "rotate": {
+                                "x": 600,
+                                "y": 1200
+                            }
+                        },
+                        "bounce": true,
+                        "direction": "none",
+                        "enable": true,
+                        "outMode": "bounce",
+                        "random": false,
+                        "speed": 0.5,
+                        "straight": false
+                    },
+                    "number": {
+                        "density": {
+                            "enable": false,
+                            "area": 2000
+                        },
+                        "limit": 0,
+                        "value": 400
+                    },
+                    "opacity": {
+                        "animation": {
+                            "enable": true,
+                            "minimumValue": 0.05,
+                            "speed": 2,
+                            "sync": true
+                        },
+                        "random": false,
+                        "value": 0.4
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "size": {
+                        "animation": {
+                            "enable": false,
+                            "minimumValue": 0.1,
+                            "speed": 30,
+                            "sync": false
+                        },
+                        "random": true,
+                        "value": 1
+                    }
+                },
+                "polygon": {
+                    "draw": {
+                        "enable": true,
+                        "lineColor": "rgba(255,255,255,0.2)",
+                        "lineWidth": 0.5
+                    },
                     "enable": true,
-                    "cover": {
-                        "value": {
-                            "r": 255,
-                            "g": 255,
-                            "b": 255
-                        }
-                    }
+                    "move": {
+                        "radius": 10
+                    },
+                    "inline": {
+                        "arrangement": "equidistant"
+                    },
+                    "scale": 2,
+                    "type": "inline",
+                    "url": "https://particles.js.org/images/hollowknight.svg"
                 },
-                "retina_detect": true,
                 "background": {
-                    "color": "#ffffff",
-                    "image": "url('https://particles.js.org/images/background3.jpg')",
+                    "color": "#111827",
+                    "image": "",
                     "position": "50% 50%",
                     "repeat": "no-repeat",
                     "size": "cover"
