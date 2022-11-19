@@ -25,6 +25,8 @@ const Particle = (props: Props) => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
+                "maxWidth": 500,
+
                 "fullScreen": {
                     "enable": true,
                     "zIndex": 0
@@ -170,7 +172,7 @@ const Particle = (props: Props) => {
                     "url": "https://particles.js.org/images/hollowknight.svg"
                 },
                 "background": {
-                    "color": "#111827",
+                    "color": "#000000",
                     "image": "",
                     "position": "50% 50%",
                     "repeat": "no-repeat",
