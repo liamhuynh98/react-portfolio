@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import styles from '../styles/Home.module.css'
 import About from '../components/About'
 import Particle from '../components/Particle'
+import WorkExperience from '../components/WorkExperience'
 
 export default function Home() {
   return (
@@ -17,19 +18,22 @@ export default function Home() {
         </Head>
 
         {/*Header*/}
-        <Header/>
+        <Header />
 
         {/*Hero*/}
         <section id = "hero" className='snap-start'>
-          <Hero/> 
+          <Hero /> 
         </section>
 
         {/*About*/}
         <section id='about' className='snap-center'>
-          <About/>
+          <About />
         </section>
 
         {/*Experience*/}
+        <section id='experience' className='snap-center'>
+          <WorkExperience/>
+        </section>
 
         {/*Skills*/}
 
