@@ -2,15 +2,16 @@ import React from 'react'
 import servicenowLogo from '../img/servicenow_logo_icon_168835.png'
 import { motion } from "framer-motion"
 import Image from 'next/image'
+import jsIcon from '../img/js32x32.png'
 
 
 type Props = {}
 
 const ExperienceCard = (props: Props) => {
   return (
-    <article>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.img
-        initial={{ y: -200, opacity: 0 }}
+        initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0}}
         viewport={{ once: true }} 
@@ -21,16 +22,20 @@ const ExperienceCard = (props: Props) => {
            <p className='font-bold text-2xl mt-1'>CrowdhubApps</p>
            <div className='flex space-x-2 my-2'>
                {/*tech uses*/}
-               <Image/>
+               <Image className='rounded-full h-10 w-10' width={undefined} height={undefined} alt={''} src={jsIcon}/>
                {/*tech uses*/}
+               <Image className='rounded-full h-10 w-10' width={undefined} height={undefined} alt={''} src={jsIcon}/>
                {/*tech uses*/}
+               <Image className='rounded-full h-10 w-10' width={undefined} height={undefined} alt={''} src={jsIcon}/>
                {/*tech uses*/}
+               <Image className='rounded-full h-10 w-10' width={undefined} height={undefined} alt={''} src={jsIcon}/>
             </div>
 
-            <p>Started work... - Ended....</p>
+            <p className='uppercase py-5 text-gray-300'>Started work... - Ended....</p>
 
+            {/*make the list scrollable, set a height make it scrollable */}
             <ul className='list-disc space-y-4 ml-5 text-lg'>
-                <li>job resposibilities and test string</li>
+                <li>job resposibilities and test stringjob resposibilities and test stringjob resposibilities and test stringjob resposibilities and test stringjob resposibilities and test string</li>
                 <li>job resposibilities and test string</li>
                 <li>job resposibilities and test string</li>
                 <li>job resposibilities and test string</li>
