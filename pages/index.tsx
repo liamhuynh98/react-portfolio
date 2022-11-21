@@ -1,13 +1,11 @@
 import Head from 'next/head'
-import { NextPage } from 'next'
-import Image from 'next/image'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import styles from '../styles/Home.module.css'
 import About from '../components/About'
 import Particle from '../components/Particle'
 import WorkExperience from '../components/WorkExperience'
 import Skills from '../components/Skills'
+import Projects from '../components/Projects'
 
 export default function Home() {
   return (
@@ -42,6 +40,9 @@ export default function Home() {
         </section>
 
         {/*Project*/}
+        <section id='projects' className='snap-start'>
+          <Projects/>
+        </section>
 
         {/*Contacts*/} 
 
