@@ -7,6 +7,7 @@ import styles from '../styles/Home.module.css'
 import About from '../components/About'
 import Particle from '../components/Particle'
 import WorkExperience from '../components/WorkExperience'
+import Skills from '../components/Skills'
 
 export default function Home() {
   return (
@@ -36,6 +37,9 @@ export default function Home() {
         </section>
 
         {/*Skills*/}
+        <section id='skills' className='snap-start'>
+          <Skills/>
+        </section>
 
         {/*Project*/}
 
