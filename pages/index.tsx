@@ -64,7 +64,6 @@ export default function Home() {
 
           </footer>
         </Link> 
-
       </div>
     </>
   )
