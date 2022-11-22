@@ -12,6 +12,8 @@
 /.next/
 /out/
 
+sanity/node_modules
+
 # production
 /build
 
@@ -25,7 +27,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
+ # local env files
 .env*.local
 
 # vercel
