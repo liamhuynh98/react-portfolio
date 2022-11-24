@@ -31,34 +31,15 @@ function Header({}: Props) {
           bgColor="transparent"
         />
       </motion.div>
-      <Link href={"#contact"}>
-        <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate = {{
-              x: 0,
-              opacity: 1,
-              scale: 1
-          }}
-          transition={{
-            duration: 1.5,
-          }}
-          className="flex flex-row items-center text-gray-300 cursor-pointer"
-        >
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
-          />
+      <Link href="#contact">
+        <motion.div className="flex flex-row items-center text-gray-300 cursor-pointer">
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            CONNTACT ME
+            contact me
           </p>
+          
         </motion.div>
       </Link>
+
 
     </header>
   );

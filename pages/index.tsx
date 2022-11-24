@@ -55,15 +55,12 @@ export default function Home() {
 
         <Link href={'#hero'}>
           <footer className='sticky bottom-5 w-full cursor-pointer'>
-
             <div className='flex items-center justify-center'>
-
               <Image height={10} width={10} className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' src={okiImage} alt=''/>
-
             </div>
-
           </footer>
         </Link> 
+        
       </div>
     </>
   )

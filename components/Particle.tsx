@@ -172,7 +172,7 @@ const Particle = (props: Props) => {
                     "url": "https://particles.js.org/images/hollowknight.svg"
                 },
                 "background": {
-                    "color": "#000000",
+                    "color": "#111827",
                     "image": "",
                     "position": "50% 50%",
                     "repeat": "no-repeat",
