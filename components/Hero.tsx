@@ -1,17 +1,19 @@
-import { lookup } from 'dns';
 import Image from 'next/image'
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircle from './BackgroundCircles'
-import profilePic from '../img/temp_image.jpg'
 import Link from 'next/link';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-function Hero({}: Props) {
+function Hero({pageInfo}: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "Hi, I go by Liam",
+            `Hi, I go by ${pageInfo.name}`,
             "I'm a coffee lover",
             "also learning how to code"
         ],
@@ -21,12 +23,12 @@ function Hero({}: Props) {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircle/>
-        <Image className="relative rounded-full h-32 w-32 mx-auto object-cover" src={profilePic} alt="" width={0} height={0}/>
+        <Image className="relative rounded-full mx-auto object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="" width={200}height={200}/>
         <div className='z-20'>
-            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>Software Engineer</h2>
+            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageInfo.role}</h2>
             <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
-                <span>
-                    {text}
+                <span className='mr-3'>
+                    {text} 
                 </span>
                 <Cursor cursorColor='#F7AB0A'/>
 
