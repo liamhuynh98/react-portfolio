@@ -11,7 +11,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import okiImage from '../img/Okii.png'
 import { GetStaticProps } from 'next'
-import { Props } from 'next/script'
 import { Experience, PageInfo, Project, Skill, Social } from "../typings"
 import { fetchExperiences } from "../utils/fetchExperiences"
 import { fetchPageInfo } from "../utils/fetchPageInfo"
@@ -35,7 +34,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
     <Particle/>   
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-1 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7ab0a]/80' >
         <Head>
-          <title>Liam's Portfolio</title>
+          <title>{pageInfo?.name} Portfolio</title>
         </Head>
 
         {/*Header*/}
