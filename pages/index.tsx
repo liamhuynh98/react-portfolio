@@ -10,8 +10,26 @@ import ContactMe from '../components/ContactMe'
 import Link from 'next/link'
 import Image from 'next/image'
 import okiImage from '../img/Okii.png'
+import { GetStaticProps } from 'next'
+import { Props } from 'next/script'
+import { Experience, PageInfo, Project, Skill, Social } from "../typings"
+import { fetchExperiences } from "../utils/fetchExperiences"
+import { fetchPageInfo } from "../utils/fetchPageInfo"
+import { fetchProjects } from "../utils/fetchProjects"
+import { fetchSkills } from "../utils/fetchSkills"
+import { fetchSocials } from "../utils/fetchSocials"
 
-export default function Home() {
+
+
+type Props = {
+  pageInfo: PageInfo;
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+}
+
+const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
     <>
     <Particle/>   
@@ -21,8 +39,8 @@ export default function Home() {
         </Head>
 
         {/*Header*/}
-        <Header />
-
+        <Header socials={socials} />
+ 
         {/*Hero*/}
         <section id = "hero" className='snap-start'>
           <Hero /> 
@@ -60,8 +78,33 @@ export default function Home() {
             </div>
           </footer>
         </Link> 
-        
+
       </div>
     </>
-  )
-}
+  );
+};
+
+export default Home;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experiences: Experience[] = await fetchExperiences();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
+
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials,
+    },
+
+    //nextjs will attempt to re-generate the page:
+    //when a request comes in at most every ** seconds
+
+    revalidate: 10,
+  };
+};
