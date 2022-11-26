@@ -31,10 +31,9 @@ export default function Header({ socials }: Props ) {
       
       <Link href="#contact">
         <motion.div className="flex flex-row items-center text-gray-300 cursor-pointer">
-          <p className="uppercase font-bold hidden md:inline-flex text-sm text-gray-400 underline hover:text-[#67e8f9]">
+          <p className="uppercase font-bold hidden md:inline-flex text-sm text-gray-400 hover:text-[#67e8f9]">
             contact me
           </p>
-          
         </motion.div>
       </Link>
     </header>

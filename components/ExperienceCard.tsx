@@ -21,8 +21,8 @@ export default function ExperienceCard({ experience }: Props) {
         className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center' src={urlFor(experience?.companyImage).url()} alt=''/>
     
         <div className='px-0 md:px-10'>
-           <h4 className='text-4xl font-light'>Software Engineer</h4>
-           <p className='font-bold text-2xl mt-1'>CrowdhubApps</p>
+           <h4 className='text-4xl font-light'>{experience?.jobTitle}</h4>
+           <p className='font-bold text-2xl mt-1'>{experience?.company}</p>
            <div className='flex space-x-2 my-2'>
               {experience.technologies.map(technology => (
                 <img key={technology._id} className="h-10 w-10 rounded-full" src={urlFor(technology.image).url()}/>
@@ -34,7 +34,8 @@ export default function ExperienceCard({ experience }: Props) {
             </p>
 
             {/*make the list scrollable, set a height make it scrollable */}
-            <ul className='list-disc space-y-4 ml-5 pr-5 text-lg max-h-96 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80'>
+            <ul 
+            className='list-disc space-y-4 ml-5 pr-5 text-lg max-h-96 scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-300 h-32 overflow-y-scroll'>
             {experience.points.map((point, i) =>(
                   <li key={i}>{point}</li>
                 ))}
