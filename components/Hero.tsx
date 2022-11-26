@@ -14,15 +14,15 @@ function Hero({pageInfo}: Props) {
     const [text, count] = useTypewriter({
         words: [
             `Hi, I go by ${pageInfo.name}`,
-            "I'm a coffee lover",
-            "also learning how to code"
+            "제 이름은 리암 입니다",
+            "你好, 我的名字是 Liam"
         ],
         loop: true,
         delaySpeed: 2000,
     });
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
-        <BackgroundCircle/>
+        {/*<BackgroundCircle/> */}
         <Image className="relative rounded-full mx-auto object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="" width={200}height={200}/>
         <div className='z-20'>
             <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageInfo.role}</h2>

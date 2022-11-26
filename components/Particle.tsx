@@ -25,11 +25,9 @@ const Particle = (props: Props) => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                "maxWidth": 500,
-
                 "fullScreen": {
                     "enable": true,
-                    "zIndex": 0
+                    "zIndex": 1
                 },
                 "detectRetina": false,
                 "fpsLimit": 120,
@@ -41,7 +39,7 @@ const Particle = (props: Props) => {
                         },
                         "onDiv": {
                             "elementId": "repulse-div",
-                            "enable": true,
+                            "enable": false,
                             "mode": "repulse"
                         },
                         "onHover": {
@@ -57,30 +55,30 @@ const Particle = (props: Props) => {
                     },
                     "modes": {
                         "bubble": {
-                            "distance": 20,
+                            "distance": 40,
                             "duration": 2,
-                            "opacity": 10,
-                            "size": 4,
-                            "speed": 2
+                            "opacity": 8,
+                            "size": 6,
+                            "speed": 3
                         },
                         "connect": {
                             "distance": 80,
                             "lineLinked": {
-                                "opacity": 1
+                                "opacity": 0.5
                             },
                             "radius": 60
                         },
                         "grab": {
                             "distance": 400,
                             "lineLinked": {
-                                "opacity": 10
+                                "opacity": 1
                             }
                         },
                         "push": {
-                            "quantity": 3
+                            "quantity": 4
                         },
                         "remove": {
-                            "quantity": 4
+                            "quantity": 2
                         },
                         "repulse": {
                             "distance": 200,
@@ -95,16 +93,16 @@ const Particle = (props: Props) => {
                 },
                 "particles": {
                     "color": {
-                        "value": "#38bdf8"
+                        "value": "#ffffff"
                     },
                     "lineLinked": {
-                        "blink": false,
-                        "color": "#f43f5e",
+                        "blink": true,
+                        "color": "#ffffff",
                         "consent": false,
                         "distance": 50,
                         "enable": true,
-                        "opacity": 4,
-                        "width": 2
+                        "opacity": 0.5,
+                        "width": 1
                     },
                     "move": {
                         "attract": {
@@ -114,12 +112,12 @@ const Particle = (props: Props) => {
                                 "y": 1200
                             }
                         },
-                        "bounce": true,
+                        "bounce": false,
                         "direction": "none",
                         "enable": true,
                         "outMode": "bounce",
                         "random": false,
-                        "speed": 0.5,
+                        "speed": 1,
                         "straight": false
                     },
                     "number": {
@@ -128,14 +126,14 @@ const Particle = (props: Props) => {
                             "area": 2000
                         },
                         "limit": 0,
-                        "value": 400
+                        "value": 200
                     },
                     "opacity": {
                         "animation": {
                             "enable": true,
                             "minimumValue": 0.05,
                             "speed": 2,
-                            "sync": true
+                            "sync": false
                         },
                         "random": false,
                         "value": 0.4
@@ -147,7 +145,7 @@ const Particle = (props: Props) => {
                         "animation": {
                             "enable": false,
                             "minimumValue": 0.1,
-                            "speed": 30,
+                            "speed": 40,
                             "sync": false
                         },
                         "random": true,
@@ -167,12 +165,12 @@ const Particle = (props: Props) => {
                     "inline": {
                         "arrangement": "equidistant"
                     },
-                    "scale": 2,
+                    "scale": 0.5,
                     "type": "inline",
-                    "url": "https://particles.js.org/images/hollowknight.svg"
+                    "url": "https://particles.js.org/images/smalldeer.svg"
                 },
                 "background": {
-                    "color": "#111827",
+                    "color": "",
                     "image": "",
                     "position": "50% 50%",
                     "repeat": "no-repeat",

@@ -27,6 +27,7 @@ export default function Header({ socials }: Props ) {
           />
         ))}
       </motion.div>
+      
       <Link href="#contact">
         <motion.div className="flex flex-row items-center text-gray-300 cursor-pointer">
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">

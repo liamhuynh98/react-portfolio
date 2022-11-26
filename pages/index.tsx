@@ -32,7 +32,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
     <>
     <Particle/>   
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-1 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7ab0a]/80' >
+    <div className='bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-1 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7ab0a]/80' >
         <Head>
           <title>{pageInfo?.name} Portfolio</title>
         </Head>
@@ -67,7 +67,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
 
         {/*Contacts*/}
         <section id='contact' className='snap-start'>
-          <ContactMe/>
+          <ContactMe pageInfo={pageInfo} />
         </section>
 
         <Link href={'#hero'}>
