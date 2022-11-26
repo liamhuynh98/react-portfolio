@@ -25,7 +25,7 @@ function Hero({pageInfo}: Props) {
         {/*<BackgroundCircle/> */}
         <Image className="relative rounded-full mx-auto object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="" width={200}height={200}/>
         <div className='z-20'>
-            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageInfo.role}</h2>
+            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px] animate-bounce'>{pageInfo.role}</h2>
             <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                 <span className='mr-3'>
                     {text} 
