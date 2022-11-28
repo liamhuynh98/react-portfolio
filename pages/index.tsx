@@ -9,7 +9,7 @@ import Projects from '../components/Projects'
 import ContactMe from '../components/ContactMe'
 import Link from 'next/link'
 import Image from 'next/image'
-import okiImage from '../img/Okii.png'
+import arrowUp from '../img/up-chevron.png'
 import { GetStaticProps } from 'next'
 import { Experience, PageInfo, Project, Skill, Social } from "../typings"
 import { fetchExperiences } from "../utils/fetchExperiences"
@@ -73,7 +73,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
         <Link href={'#hero'}>
           <footer className='sticky bottom-5 w-full cursor-pointer'>
             <div className='flex items-center justify-center'>
-              <Image height={10} width={10} className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' src={""} alt=''/>
+              <Image height={10} width={10} className='w-7 h-7 rounded-full cursor-pointer animate-bounce' src={arrowUp.src} alt=''/>
             </div>
           </footer>
         </Link> 
