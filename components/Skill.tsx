@@ -1,9 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import jsIcon from '../img/js32x32.png'
 import { Skill } from '../typings'
 import { urlFor } from '../sanity'
+import { Image } from "image/nextjs"
 
 type Props = {
     skill: Skill;
@@ -13,7 +12,7 @@ type Props = {
 const Skill = ({ skill, directionLeft}: Props) => {
   return (
     <div className='group relative flex cursor-pointer'>
-        <motion.img 
+        <motion.img
         initial={{ x: directionLeft ? -200 : 200, opacity: 0 }} 
         transition={{ duration: 1}} 
         whileInView={{ opacity: 1, x: 0}} 
