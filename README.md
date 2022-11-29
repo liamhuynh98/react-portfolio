@@ -5,6 +5,33 @@
 - Sanity.io
 - Typescript
 
+## Structure Design
+Components
+    ParticleBackground
+    Header
+    Hero
+    About
+    Experience
+    Skills
+        Skill Card
+    Project
+        Project Card
+    Contact
+
+Apis
+    getExperience
+    getPageInfo
+    getProjects
+    getSkills
+    getSocials
+
+Utils
+    fetchExperiences
+    fetchPageInfo
+    fetchProjects
+    fetchSkills
+    fetchSocials
+    
 ## Features still in-progress
 - Mobile View on some sections 
 - Document Ordering in Sanity
