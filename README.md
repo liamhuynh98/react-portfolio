@@ -6,31 +6,29 @@
 - Typescript
 
 ## Structure Design
-Components
-    ParticleBackground
-    Header
-    Hero
-    About
-    Experience
-    Skills
-        Skill Card
-    Project
-        Project Card
-    Contact
++ Components
+    1. ParticleBackground
+    2. Header
+    3. Hero
+    4. About
+    5. Experience
+    6. Skills -> Skill Card
+    7. Project -> Project Card
+    8. Contact
 
-Apis
-    getExperience
-    getPageInfo
-    getProjects
-    getSkills
-    getSocials
++ Apis
+    1. getExperience
+    2. getPageInfo
+    3. getProjects
+    4. getSkills
+    5. getSocials
 
-Utils
-    fetchExperiences
-    fetchPageInfo
-    fetchProjects
-    fetchSkills
-    fetchSocials
++ Utils
+    1. fetchExperiences
+    2. fetchPageInfo
+    3. fetchProjects
+    4. fetchSkills
+    5. fetchSocials
     
 ## Features still in-progress
 - Mobile View on some sections 
