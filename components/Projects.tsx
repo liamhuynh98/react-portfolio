@@ -27,12 +27,13 @@ function Projects( { projects }: Props){
                     transition={{ duration: 1.2 }} 
                     whileInView={{opacity: 1, y:0 }} 
                     viewport={{ once:true}} 
-                    src={urlFor(project?.image).url()} 
+                    src={urlFor(project?.image).url()}
+                    className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[200px] md:w-[300px] xl:w-[600px] h-[200px] md:h-[300px] xl:h-[600px]' 
                     alt=""/>
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-4xl font-semibold text-center'>
                             <span className='underline decoration-[#F7AB0A]/50'>
-                                Case Study { i + 1} of {projects.length}:
+                                {/* Case Study { i + 1} of {projects.length}: */}
                             </span> {project?.title}
                         </h4>
                         
